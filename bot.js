@@ -3,7 +3,7 @@ const fs = require('fs');
 var Swears = JSON.parse(fs.readFileSync("./swears.json", "utf8"));
 const client = new Discord.Client();
 const moment = require("moment");
-const prefix = "..";
+const prefix = "=";
 client.on('ready', () => {
   console.log(`Logged in as ${client.user.tag}!`);
 });
@@ -31,7 +31,7 @@ client.on('guildMemberAdd', member=> {
 
 
 client.on('message', message => {
-	const prefix = '..'
+	const prefix = '='
 var args = message.content.split(" ").slice(1);    
 if(message.content.startsWith(prefix + 'id')) {
 var year = message.author.createdAt.getFullYear()
@@ -724,27 +724,27 @@ client.on('message', message => {
 
 
     if (message.content.startsWith(prefix + 'playing')) {
-    if (message.author.id !== '389100615432929290') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '408926307372498945') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
     } else
 
 
     if (message.content.startsWith(prefix + 'streem')) {
-    if (message.author.id !== '389100615432929290') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '408926307372498945') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setGame(argresult, "http://twitch.tv/HP");
         message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
     } else
 
     if (message.content.startsWith(prefix + 'setname')) {
-    if (message.author.id !== '389100615432929290') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '408926307372498945') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
       client.user.setUsername(argresult).then
           message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
       return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
     } else
 
     if (message.content.startsWith(prefix + 'setavatar')) {
-    if (message.author.id !== '389100615432929290') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    if (message.author.id !== '408926307372498945') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
     client.user.setAvatar(argresult);
         message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
     }
@@ -1913,7 +1913,7 @@ client.on("guildMemberAdd", (member) => {
     console.log('made it till here!');
     var guild;
     while (!guild)
-        guild = client.guilds.get("492244973228523520")
+        guild = client.guilds.get("406926224875847720")
     guild.fetchInvites().then((data) => {
         data.forEach((Invite, key, map) => {
             var Inv = Invite.code;
@@ -1933,7 +1933,7 @@ client.on('message', message => {
             if(!message.channel.guild) return;
 let args = message.content.split(' ').slice(1).join(' ');
 if (message.content.startsWith('...bcall')){
- if (message.author.id !== '389100615432929290') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+ if (message.author.id !== '408926307372498945') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
 message.channel.sendMessage('جار ارسال الرسالة |✅')
 client.users.forEach(m =>{
 m.sendMessage(args)
